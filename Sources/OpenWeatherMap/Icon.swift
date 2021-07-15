@@ -51,6 +51,14 @@ extension Icon: RawRepresentable {
     }
 }
 
+// MARK: - CaseIterable
+
+extension Icon {
+    
+    static let allCases: [Icon] = WeatherCondition.allCases
+        .flatMap({ [.day($0), .night($0)] })
+}
+
 // MARK: - Supporting Types
 
 public extension Icon {
@@ -63,7 +71,7 @@ public extension Icon {
 
 public extension Icon {
     
-    enum WeatherCondition: UInt {
+    enum WeatherCondition: UInt, CaseIterable {
         
         /// Clear Sky
         case clearSky           = 01
