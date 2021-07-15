@@ -6,6 +6,7 @@
 //
 
 /// OpenWeatherMap Icon Name
+// https://openweathermap.org/weather-conditions#Icon-list
 public struct Icon: Equatable, Hashable {
     
     /// Time of day.

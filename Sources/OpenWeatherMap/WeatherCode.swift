@@ -143,7 +143,7 @@ public extension WeatherCode {
     }
     
     static func thunderstorm(_ code: Thunderstorm) -> WeatherCode {
-        return WeatherCode(unsafe: code.rawValue)
+        return WeatherCode(code)
     }
 }
 
@@ -169,6 +169,6 @@ public extension WeatherCode {
     }
     
     static func clouds(_ code: WeatherCode.Clouds) -> WeatherCode {
-        return WeatherCode(unsafe: code.rawValue)
+        return WeatherCode(code)
     }
 }
